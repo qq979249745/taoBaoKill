@@ -1,0 +1,28 @@
+﻿{
+  "name": "淘宝秒杀",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "这就是我不一样的烟火",
+  "browser_action": {
+    "default_icon": "1.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/content-script.js"
+      ]
+    }
+  ]
+}
